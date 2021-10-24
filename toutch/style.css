@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+div {
+    position: relative;
+}
+div::before {
+    content: "";
+    position: absolute;
+    top: -59px;
+    left: -60px;
+    width: 50%;
+    height: 50%;
+    background: url(./images/3.png) no-repeat;
+    background-size: 60%;
+    z-index: -1;
+}
+div::after {
+    content: "";
+    position: absolute;
+    bottom: -136px;
+    right: -140px;
+    width: 50%;
+    height: 50%;
+    background: url(./images/3.png) no-repeat;
+    background-size: 60%;
+    z-index: -1;
+}
+img {
+    border-radius: 20px;
+}
+/* Shine */
+div figure {
+       border-radius: 20px;
+    overflow: hidden;
+	position: relative;
+}
+div figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+div figure::after {
+	position: absolute;
+	top: 0;
+	right: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+div figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+div figure:hover::after {
+	-webkit-animation: shine2 .75s;
+	animation: shine2 .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@-webkit-keyframes shine2 {
+	100% {
+		right: 125%;
+	}
+}
+@keyframes shine2 {
+	100% {
+		right: 125%;
+	}
+}
